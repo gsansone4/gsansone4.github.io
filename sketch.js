@@ -40,6 +40,7 @@ function draw() {
   //fill(200,200,200, 50);
   translate(-w/2, -h/2);
   //noStroke();
+  stroke(0);
   for (var y = 0; y < rows-1; y++) {
     beginShape(TRIANGLE_STRIP);
     for (var x = 0; x < cols; x++) {
