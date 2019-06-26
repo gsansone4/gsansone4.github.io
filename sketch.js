@@ -4,7 +4,7 @@ var w = window.screen.availWidth*1.75;
 var h = window.screen.availHeight*1.75;
 
 var flying = 0;
-var angleX = 0;
+var angleX = PI/3;
 var angleY = 0;
 var terrain = [];
 
@@ -40,14 +40,14 @@ function draw() {
     angleY += PI/36;
   }
   
-  if (keyIsPressed && keyCode === UP_ARROW && angleX > -PI/3) {
+  if (keyIsPressed && keyCode === UP_ARROW && angleX > 0) {
     angleX -= PI/36;
   }
   if (keyIsPressed && keyCode === DOWN_ARROW && angleX < PI/3) {
     angleX += PI/36;
   }
 
-  background(255);
+  //background(255);
   translate(0, 50);
   rotateX(angleX);
   rotateY(angleY);
