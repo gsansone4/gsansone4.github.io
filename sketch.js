@@ -10,7 +10,7 @@ var terrain = [];
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
   cols = w / scl;
-  rows = h/ scl;
+  rows = (h*2) / scl;
   frameRate(30);
   for (var x = 0; x < cols; x++) {
     terrain[x] = [];
@@ -39,7 +39,7 @@ function draw() {
     angle += PI/36;
   }
 
-  background(255);
+  //background(255);
   translate(0, 50);
   rotateX(PI/3);
   rotateY(angle);
