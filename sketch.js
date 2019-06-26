@@ -51,7 +51,7 @@ function draw() {
   translate(0, 50);
   rotateX(angleX);
   rotateY(angleY);
-  //fill(200,200,200, 50);
+  fill(200,200,200, 50);
   translate(-w/2, -h/2);
   noStroke();
   //stroke(0);
