@@ -32,6 +32,12 @@ function draw() {
     }
     yoff += 0.1;
   }
+  if (keyIsDown(LEFT_ARROW) && angle > -PI/3) {
+    angle -= PI/36;
+  } 
+  if (keyIsDown(RIGHT_ARROW) && angle < PI/3) {
+    angle += PI/36;
+  }
 
   background(255);
   translate(0, 50);
@@ -39,7 +45,7 @@ function draw() {
   rotateY(angle);
   //fill(200,200,200, 50);
   translate(-w/2, -h/2);
-  //noStroke();
+  noStroke();
   stroke(0);
   for (var y = 0; y < rows-1; y++) {
     beginShape(TRIANGLE_STRIP);
@@ -49,13 +55,5 @@ function draw() {
       vertex(x*scl, (y+1)*scl, terrain[x][y+1]);
     }
     endShape();
-  }
-}
-
-function keyPressed() {
-  if (keyCode === LEFT_ARROW && angle > -PI/3) {
-    angle -= PI/18;
-  } else if (keyCode === RIGHT_ARROW && angle < PI/3) {
-    angle += PI/18;
   }
 }
