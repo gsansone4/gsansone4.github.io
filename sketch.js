@@ -33,14 +33,14 @@ function draw() {
     }
     yoff += 0.1;
   }
-  if (keyIsPressed && keyCode === LEFT_ARROW && angleY > -PI/4) {
+  if (keyIsPressed && keyCode === LEFT_ARROW && angleY > -PI/6) {
     angleY -= PI/36;
   }
-  if (keyIsPressed && keyCode === RIGHT_ARROW && angleY < PI/4) {
+  if (keyIsPressed && keyCode === RIGHT_ARROW && angleY < PI/6) {
     angleY += PI/36;
   }
   
-  if (keyIsPressed && keyCode === UP_ARROW && angleX > 0) {
+  if (keyIsPressed && keyCode === UP_ARROW && angleX > PI/6) {
     angleX -= PI/36;
   }
   if (keyIsPressed && keyCode === DOWN_ARROW && angleX < PI/3) {
