@@ -1,7 +1,7 @@
 var cols, rows;
 var scl = 20;
 var w = window.screen.availWidth*1.75;
-var h = window.screen.availHeight*1.75;
+var h = window.screen.availHeight;
 
 var flying = 0;
 var angleX = PI/3;
