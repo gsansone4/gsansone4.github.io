@@ -32,10 +32,10 @@ function draw() {
     }
     yoff += 0.1;
   }
-  if (keyIsDown(LEFT_ARROW) && angle > -PI/3) {
+  if (keyIsPressed && keyCode === LEFT_ARROW && angle > -PI/4) {
     angle -= PI/36;
   } 
-  if (keyIsDown(RIGHT_ARROW) && angle < PI/3) {
+  if (keyIsPressed && keyCode === RIGHT_ARROW && angle < PI/4) {
     angle += PI/36;
   }
 
@@ -46,7 +46,7 @@ function draw() {
   //fill(200,200,200, 50);
   translate(-w/2, -h/2);
   noStroke();
-  stroke(0);
+  //stroke(0);
   for (var y = 0; y < rows-1; y++) {
     beginShape(TRIANGLE_STRIP);
     for (var x = 0; x < cols; x++) {
