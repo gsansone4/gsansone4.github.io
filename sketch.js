@@ -22,6 +22,7 @@ function setup() {
 }
 
 function draw() {
+  
   flying -= 0.1;
   var yoff = flying;
   for (var y = 0; y < rows; y++) {
