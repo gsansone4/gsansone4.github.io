@@ -53,9 +53,9 @@ function draw() {
 }
 
 function keyPressed() {
-  if (keyCode == LEFT_ARROW && angle > -PI/3) {
+  if (keyCode === LEFT_ARROW && angle > -PI/3) {
     angle -= PI/18;
-  } else if (keyCode == RIGHT_ARROW && angle < PI/3) {
+  } else if (keyCode === RIGHT_ARROW && angle < PI/3) {
     angle += PI/18;
   }
 }
