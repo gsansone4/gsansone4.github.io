@@ -1,7 +1,7 @@
 var cols, rows;
 var scl = 20;
 var w = window.screen.availWidth*1.75;
-var h = window.screen.availHeight;
+var h = window.screen.availHeight*1.75;
 
 var flying = 0;
 var angleX = 0;
@@ -11,7 +11,7 @@ var terrain = [];
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
   cols = w / scl;
-  rows = (h) / scl;
+  rows = h / scl;
   frameRate(30);
   for (var x = 0; x < cols; x++) {
     terrain[x] = [];
@@ -22,7 +22,7 @@ function setup() {
 }
 
 function draw() {
-
+  clear();
   flying -= 0.1;
   var yoff = flying;
   for (var y = 0; y < rows; y++) {
@@ -47,11 +47,11 @@ function draw() {
     angleX += PI/36;
   }
 
-  //background(255);
+  background(255);
   translate(0, 50);
   rotateX(angleX);
   rotateY(angleY);
-  fill(200,200,200, 50);
+  //fill(200,200,200, 50);
   translate(-w/2, -h/2);
   noStroke();
   //stroke(0);
