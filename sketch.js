@@ -4,7 +4,7 @@ var w = window.screen.availWidth*1.75;
 var h = window.screen.availHeight;
 
 var flying = 0;
-var pi = 3.14159;
+var pi = 3.14159265;
 var angleX = pi/3;
 var angleY = 0;
 var terrain = [];
@@ -35,17 +35,17 @@ function draw() {
     yoff += 0.1;
   }
   if (keyIsPressed && keyCode === LEFT_ARROW && angleY > -pi/6) {
-    angleY -= pi/72;
+    angleY -= pi/144;
   }
   if (keyIsPressed && keyCode === RIGHT_ARROW && angleY < pi/6) {
-    angleY += pi/72;
+    angleY += pi/144;
   }
   
   if (keyIsPressed && keyCode === UP_ARROW && angleX > pi/6) {
-    angleX -= pi/72;
+    angleX -= pi/144;
   }
   if (keyIsPressed && keyCode === DOWN_ARROW && angleX < pi/3) {
-    angleX += pi/72;
+    angleX += pi/144;
   }
 
   background(255);
