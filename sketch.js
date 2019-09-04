@@ -35,17 +35,17 @@ function draw() {
     yoff += 0.1;
   }
   if (keyIsPressed && keyCode === LEFT_ARROW && angleY > -pi/6) {
-    angleY -= pi/36;
+    angleY -= pi/72;
   }
   if (keyIsPressed && keyCode === RIGHT_ARROW && angleY < pi/6) {
-    angleY += pi/36;
+    angleY += pi/72;
   }
   
   if (keyIsPressed && keyCode === UP_ARROW && angleX > pi/6) {
-    angleX -= pi/36;
+    angleX -= pi/72;
   }
   if (keyIsPressed && keyCode === DOWN_ARROW && angleX < pi/3) {
-    angleX += pi/36;
+    angleX += pi/72;
   }
 
   background(255);
