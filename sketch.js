@@ -4,7 +4,8 @@ var w = window.screen.availWidth*1.75;
 var h = window.screen.availHeight;
 
 var flying = 0;
-var angleX = PI/3;
+var pi = 3.14159;
+var angleX = pi/3;
 var angleY = 0;
 var terrain = [];
 
@@ -14,7 +15,7 @@ function setup() {
   rows = h / scl;
   frameRate(30);
   for (var x = 0; x < cols; x++) {
-    terrain[x] = [];
+    terrain[x] = [rows];
     for (var y = 0; y < rows; y++) {
       terrain[x][y] = 0;
     }
@@ -33,21 +34,21 @@ function draw() {
     }
     yoff += 0.1;
   }
-  if (keyIsPressed && keyCode === LEFT_ARROW && angleY > -PI/6) {
-    angleY -= PI/36;
+  if (keyIsPressed && keyCode === LEFT_ARROW && angleY > -pi/6) {
+    angleY -= pi/36;
   }
-  if (keyIsPressed && keyCode === RIGHT_ARROW && angleY < PI/6) {
-    angleY += PI/36;
+  if (keyIsPressed && keyCode === RIGHT_ARROW && angleY < pi/6) {
+    angleY += pi/36;
   }
   
-  if (keyIsPressed && keyCode === UP_ARROW && angleX > PI/6) {
-    angleX -= PI/36;
+  if (keyIsPressed && keyCode === UP_ARROW && angleX > pi/6) {
+    angleX -= pi/36;
   }
-  if (keyIsPressed && keyCode === DOWN_ARROW && angleX < PI/3) {
-    angleX += PI/36;
+  if (keyIsPressed && keyCode === DOWN_ARROW && angleX < pi/3) {
+    angleX += pi/36;
   }
 
-  //background(255);
+  background(255);
   translate(0, 50);
   rotateX(angleX);
   rotateY(angleY);
