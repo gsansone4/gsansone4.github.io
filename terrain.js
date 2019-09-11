@@ -67,3 +67,7 @@ function draw() {
     endShape();
   }
 }
+
+function windowResized(){
+  resizeCanvas(windowWidth/2, windowHeight/2);
+}
