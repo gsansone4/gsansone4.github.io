@@ -45,7 +45,7 @@ function draw() {
   if (keyIsPressed && keyCode === UP_ARROW && angleX > pi/6) {
     angleX -= pi/144;
   }
-  if (keyIsPressed && keyCode === DOWN_ARROW && angleX < 4*pi/9) {
+  if (keyIsPressed && keyCode === DOWN_ARROW && angleX < 7*pi/18) {
     angleX += pi/144;
   }
 
