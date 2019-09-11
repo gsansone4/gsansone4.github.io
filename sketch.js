@@ -1,6 +1,6 @@
 var cols, rows;
 var scl = 20;
-var w = window.screen.availWidth*1.75;
+var w = window.screen.availWidth*1.25;
 var h = window.screen.availHeight;
 
 var flying = 0;
@@ -10,7 +10,7 @@ var angleY = 0;
 var terrain = [];
 
 function setup() {
-  createCanvas(windowWidth, windowHeight, WEBGL);
+  createCanvas(windowWidth/2, windowHeight/2, WEBGL);
   cols = w / scl;
   rows = h / scl;
   frameRate(30);
@@ -41,14 +41,15 @@ function draw() {
     angleY += pi/144;
   }
   
+  //print(angleX);
   if (keyIsPressed && keyCode === UP_ARROW && angleX > pi/6) {
     angleX -= pi/144;
   }
-  if (keyIsPressed && keyCode === DOWN_ARROW && angleX < pi/2) {
+  if (keyIsPressed && keyCode === DOWN_ARROW && angleX < 17*pi/36) {
     angleX += pi/144;
   }
 
-  background(255);
+  background(168, 220, 255);
   translate(0, 50);
   rotateX(angleX);
   rotateY(angleY);
