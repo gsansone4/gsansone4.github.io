@@ -49,7 +49,7 @@ function draw() {
     angleX += pi/144;
   }
 
-  background(168, 220, 255, 150);
+  background(168, 220, 255);
   translate(0, 50);
   rotateX(angleX);
   rotateY(angleY);
@@ -60,7 +60,7 @@ function draw() {
   for (var y = 0; y < rows-1; y++) {
     beginShape(TRIANGLE_STRIP);
     for (var x = 0; x < cols; x++) {
-      fill (map(terrain[x][y], -100, 100, 0, 255, true), map(terrain[x][y], -100, 100, 0, 140, true),map(terrain[x][y], -100, 100, 255, 0, true), 150);
+      fill (map(terrain[x][y], -100, 100, 0, 255, true), map(terrain[x][y], -100, 100, 0, 140, true),map(terrain[x][y], -100, 100, 255, 0, true), 230);
       vertex(x*scl, y*scl, terrain[x][y]);
       vertex(x*scl, (y+1)*scl, terrain[x][y+1]);
     }
