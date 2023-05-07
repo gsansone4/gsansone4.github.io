@@ -5,33 +5,33 @@ var count_changed = 1;
 
 function setup() {
   actions = [
-    "Slow Pace",
+    "Diagonal Left",
+    "Diagonal Right",
     "270° Left Turn",
-    "Normal Pace",
-    "Fast Pace",
+    "270° Right Turn",
     "Left Turn",
     "Right Turn",
     "HALT Left Turn Forward",
     "HALT Right Turn Forward",
+    "HALT Down Walk Around",
+    "HALT Fast Forward From Sit",
+    "HALT Sit",
     "360° Right Turn",
     "360° Left Turn",
+    "About Turn",
+    "Figure 8 No Distractions",
+    "Stop and Down",
+    "Serpentine Weave Once",
     "Offset Serpentine Left",
     "Offset Serpentine Right",
     "Moving Side Step Right",
     "Moving Side Step Left",
-    "270° Right Turn",
     "Loop Right",
     "Loop Left",
-    "HALT Down Walk Around",
-    "HALT Sit",
-    "Figure 8 No Distractions",
+    "Slow Pace",
+    "Normal Pace",
+    "Fast Pace",
     "Call Front Return to Heel",
-    "Diagonal Left",
-    "Diagonal Right",
-    "Stop and Down",
-    "About Turn",
-    "Serpentine Weave Once",
-    "HALT Fast Forward From Sit",
     "Call Front Finish Right Forward",
     "Call Front Finish Left Forward"
   ];
@@ -55,14 +55,12 @@ function draw() {
     if (action_count > actions.length){
       action_count = actions.length;
     }
+    var index = floor(random(0, actions.length));
     for (let i=0; i<action_count; i++){
-      var index = floor(random(0, actions.length));
-      if (index == prev_index){
-        if (index < (actions.length/2)){
-          index = floor(random(index+1,actions.length));
-        } else {
-          index = floor(random(0, index-1));
-        }
+      if (index < (actions.length/2)){
+        index = floor(random(index+1,actions.length));
+      } else {
+        index = floor(random(0, index-1));
       }
       //console.log(actions[index]);
       output_actions.push(actions[index]);
@@ -70,7 +68,8 @@ function draw() {
     }
     count_changed = 0;
     text_pos = 100;
-    direction = floor(random(0,1));
+    direction = floor(random(0,2));
+    console.log(direction);
     start = "Clockwise";
     if (direction) {
       start = "Counter-Clockwise";
