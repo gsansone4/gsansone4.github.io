@@ -51,7 +51,11 @@ function draw() {
     for (let i=0; i<action_count; i++){
       var index = floor(random(0, actions.length));
       if (index == prev_index){
-        index++;
+        if (index < (actions.length/2)){
+          index = floor(random(index+1,actions.length));
+        } else {
+          index = floor(random(0, index-1));
+        }
       }
       //console.log(actions[index]);
       output_actions.push(actions[index]);
@@ -59,10 +63,17 @@ function draw() {
     }
     count_changed = 0;
     text_pos = 100;
-    output_actions.forEach(function(act){
-      text(act, 100, text_pos);
+    direction = floor(random(0,1));
+    start = "Clockwise";
+    if (direction) {
+      start = "Counter-Clockwise";
+    }
+    text("Starting Direction: " + start, 100, text_pos);
+    text_pos += 20;
+    for (let i=0; i<output_actions.length; i++){
+      text(str(i+1) + ") " + output_actions[i], 120, text_pos);
       text_pos += 20;
-    });
+    }
     console.log(output_actions);
   }
 }
