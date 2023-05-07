@@ -8,6 +8,7 @@ function setup() {
     "Slow Pace",
     "270° Left Turn",
     "Normal Pace",
+    "Fast Pace",
     "Left Turn",
     "Right Turn",
     "HALT Left Turn Forward",
@@ -24,9 +25,15 @@ function setup() {
     "HALT Down Walk Around",
     "HALT Sit",
     "Figure 8 No Distractions",
-    "Moving Side Step Right",
-    "Moving Side Step Left",
-    "Call Front Return to Heel"
+    "Call Front Return to Heel",
+    "Diagonal Left",
+    "Diagonal Right",
+    "Stop and Down",
+    "About Turn",
+    "Serpentine Weave Once",
+    "HALT Fast Forward From Sit",
+    "Call Front Finish Right Forward",
+    "Call Front Finish Left Forward"
   ];
   createCanvas(1000, 1000);
   fill(0,0,0);
